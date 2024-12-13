@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 # Configuration
 @dataclass
 class DownloadConfig:
-    base_path: str = '/home/ec2-user/maps-server/files'
+    base_path: str = '/home/ec2-user/maps-server-processing/files'
     video_path: str = field(init=False)
     audio_path: str = field(init=False)
     ydl_opts: Dict = field(default_factory=lambda: {'quiet': True})
