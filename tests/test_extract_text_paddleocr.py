@@ -1,11 +1,20 @@
 import sys
 import os
 from pathlib import Path
+import logging
 
 # Add the parent directory to Python path to import the extract_text module
 sys.path.append(str(Path(__file__).parent.parent))
 
-from src.services.video_processing.extract_text import main as extract_text
+from src.services.video_processing.extract_text_paddleocr import main as extract_text
+from src.utils.logger_config import setup_cloudwatch_logging
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+setup_cloudwatch_logging()
 
 # Define test video path - adjust this to your actual test video location
 test_video_path = '/home/ec2-user/maps-server-processing/files/video/7185551271389072682.mp4'
@@ -22,11 +31,6 @@ try:
     if extracted_texts is None:
         print("No texts were extracted from the video")
         sys.exit(1)
-        
-    # Print results
-    print("\nExtracted texts:")
-    for i, text in enumerate(extracted_texts, 1):
-        print(f"{i}. {text}")
     
     print(extracted_texts)
 

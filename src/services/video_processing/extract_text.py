@@ -242,10 +242,8 @@ class TextExtractor:
             logger.error(f"Text extraction failed: {str(e)}", exc_info=True)
             raise
 
-def main():
+def main(video_file_path, video_id):
     extractor = TextExtractor()
-    video_file_path = '/home/ec2-user/maps-server/files/video/7185551271389072682.mp4'
-    video_id = '7185551271389072682'
     return extractor.extract_text(video_file_path, video_id)
 
 if __name__ == "__main__":
