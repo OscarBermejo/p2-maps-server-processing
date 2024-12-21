@@ -87,13 +87,13 @@ def query_chatgpt(description: str, text: str, transcription: str) -> str:
         
         Instructions:
         1. Return only specific places that are being explicitly recommended or reviewed
-        2. Format each place as: [Place Name], [City/Country], [Type of Place]
+        2. Format each place as: [Place Name], [City] (if not in any city use the closest city), [Type of Place]
         3. One place per line
         4. If no specific place is mentioned, return exactly: "No places of interest found"
         
         Example format:
-        Maseria Moroseta, Ostuni Italy, Boutique Hotel
-        Grotta Palazzese, Polignano Italy, Restaurant
+        Maseria Moroseta, Ostuni, Boutique Hotel
+        Grotta Palazzese, Polignano, Restaurant
     """
 
     # Initialize OpenAI client with API key
@@ -115,17 +115,6 @@ def query_chatgpt(description: str, text: str, transcription: str) -> str:
 def search_location(recommendations: str) -> Dict[str, Dict]:
     """
     Search for places using Google Maps API and return their details.
-    
-    Args:
-        recommendations: String containing place recommendations
-    
-    Returns:
-        Dict mapping place names to their details including:
-        - Google Maps link
-        - Rating
-        - Price level
-        - Opening hours
-        - Contact info
     """
     logger.info("Searching for locations using Google Maps API")
     if not recommendations or "No places of interest found" in recommendations:
@@ -137,11 +126,11 @@ def search_location(recommendations: str) -> Dict[str, Dict]:
     logger.info(f'Places recommended: {places}')
 
     for location in places:
-        if not location:
-            continue
-
         try:
-            place_name = location.split(',')[0].strip()
+            # Split location string and extract city
+            location_parts = location.split(',')
+            place_name = location_parts[0].strip()
+            city = location_parts[1].strip() if len(location_parts) > 1 else 'Unknown'
             
             # First get basic place info
             result = gmaps.places(query=location)
@@ -159,15 +148,17 @@ def search_location(recommendations: str) -> Dict[str, Dict]:
                     'formatted_phone_number',
                     'opening_hours',
                     'website',
-                    'user_ratings_total'
+                    'user_ratings_total',
+                    'url'  # For Google Maps link
                 ])['result']
                 
                 location_info = {
                     'name': place['name'],
                     'address': place.get('formatted_address', 'No address found'),
+                    'city': city,  # Using city from ChatGPT output
                     'latitude': place['geometry']['location']['lat'],
                     'longitude': place['geometry']['location']['lng'],
-                    'google_maps_link': f"https://www.google.com/maps/place/?q=place_id:{place_id}",
+                    'google_maps_link': place_details.get('url', ''),
                     'rating': place_details.get('rating', 'No rating'),
                     'total_ratings': place_details.get('user_ratings_total', 0),
                     'price_level': {
@@ -187,12 +178,12 @@ def search_location(recommendations: str) -> Dict[str, Dict]:
                     location_info['hours'] = place_details['opening_hours'].get('weekday_text', [])
                 
                 google_map_dict[location] = location_info
-                print(f"Successfully found location for: {location}")
+                logger.info(f"Successfully found location for: {location}")
             else:
-                print(f"No results found for location: {location}")
+                logger.warning(f"No results found for location: {location}")
         
         except Exception as e:
-            print(f"Error searching location '{location}': {str(e)}", exc_info=True)
+            logger.error(f"Error searching location '{location}': {str(e)}")
             continue
 
     return google_map_dict

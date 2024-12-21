@@ -42,8 +42,8 @@ def update_database(
         # First, create restaurant entries
         restaurant_ids = []
         for place_name, place_info in places_data.items():
-            # Extract city from address
-            city = extract_city_from_address(place_info['address'])
+            # Use city directly from place_info instead of extracting from address
+            city = place_info.get('city', 'Unknown')
             
             # Convert rating to proper format
             rating = None
@@ -68,7 +68,7 @@ def update_database(
                 }.get(place_info.get('price_level'))
                 existing_restaurant.website = place_info.get('website')
                 existing_restaurant.phone = place_info.get('phone')
-                existing_restaurant.city = city
+                existing_restaurant.city = city  # Update city from place_info
                 existing_restaurant.updated_at = datetime.utcnow()
             else:
                 # Create new restaurant
@@ -83,7 +83,7 @@ def update_database(
                     }.get(place_info.get('price_level')),
                     website=place_info.get('website'),
                     phone=place_info.get('phone'),
-                    city=city
+                    city=city  # Use city from place_info
                 )
                 db.add(new_restaurant)
                 db.flush()
