@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 from datetime import datetime
 from ..utils.logger_config import setup_cloudwatch_logging
+from sqlalchemy.sql import func
 
 logger = setup_cloudwatch_logging()
 
@@ -149,3 +150,12 @@ class UserLoginSchema(BaseModel):
     # Defines the expected format for login requests
     email: str
     password: str
+
+class ProcessedVideo(Base):
+    __tablename__ = 'processed_videos'
+
+    video_id = Column(String(255), primary_key=True)
+    platform = Column(String(50), nullable=False)  # e.g., 'tiktok', 'instagram'
+    processed_at = Column(DateTime, server_default=func.now())
+    has_restaurants = Column(Boolean, default=False)
+    video_url = Column(String(255))

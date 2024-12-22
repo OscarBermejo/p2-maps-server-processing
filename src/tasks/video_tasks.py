@@ -1,17 +1,19 @@
 from celery import shared_task
 from src.services.video_processing.download_video import VideoDownloader
 from src.services.video_processing.extract_audio import AudioExtractor
-from src.services.video_processing.extract_text import TextExtractor
+from src.services.video_processing.extract_text_paddleocr import TextExtractor
 from src.services.video_processing.utils import query_chatgpt, search_location, store_video_data
 import asyncio
 import concurrent.futures
 import os
 import logging
+import time
 
 logger = logging.getLogger(__name__)
 
 @shared_task
 def process_video(url: str):
+    start_time = time.time()
     try:
         # 1. Download video and get metadata
         logger.info("Starting video download...")
@@ -93,6 +95,11 @@ def process_video(url: str):
         if os.path.exists(audio_file):
             os.remove(audio_file)
             logger.info(f"Removed audio file: {audio_file}")
+
+        # Calculate and log total execution time
+        end_time = time.time()
+        execution_time = end_time - start_time
+        logger.info(f"Total task execution time: {execution_time:.2f} seconds")
 
     except Exception as e:
         logger.error(f"Major error in process_video: {str(e)}", exc_info=True)

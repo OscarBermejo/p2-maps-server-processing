@@ -20,7 +20,7 @@ sys.path.append(project_root)
 
 from src.tasks.video_tasks import process_video
 from src.database import SessionLocal
-from src.models.models import Video
+from src.models.models import Video, ProcessedVideo
 
 # Barcelona-specific restaurant hashtags
 BARCELONA_HASHTAGS = [
@@ -94,11 +94,28 @@ AMSTERDAM_HASHTAGS = [
 ]
 
 def video_exists(video_id: str, db_session) -> bool:
-    logger.debug(f"Checking if video {video_id} exists in database")
-    query = select(Video).where(Video.video_id == video_id)
+    """Check if video has been processed before"""
+    logger.debug(f"Checking if video {video_id} exists in processed_videos")
+    query = select(ProcessedVideo).where(ProcessedVideo.video_id == video_id)
     result = db_session.execute(query).first()
-    logger.debug(f"Video exists: {result is not None}")
+    logger.debug(f"Video exists in processed_videos: {result is not None}")
     return result is not None
+
+def mark_video_as_processed(video_id: str, url: str, has_restaurants: bool, db_session):
+    """Mark a video as processed in the database"""
+    try:
+        processed_video = ProcessedVideo(
+            video_id=video_id,
+            platform='tiktok',
+            has_restaurants=has_restaurants,
+            video_url=url
+        )
+        db_session.add(processed_video)
+        db_session.commit()
+        logger.info(f"Marked video {video_id} as processed (has_restaurants={has_restaurants})")
+    except Exception as e:
+        logger.error(f"Error marking video as processed: {e}")
+        db_session.rollback()
 
 def get_challenge_videos(hashtag: str, max_videos: int = 10) -> List[dict]:
     logger.info(f"Starting get_challenge_videos for #{hashtag}")
@@ -156,16 +173,47 @@ def process_hashtag_videos(hashtag: str, max_videos: int = 100):
     videos = get_challenge_videos(hashtag, max_videos)
     logger.info(f"Found {len(videos)} new videos to process")
     
+    db = SessionLocal()
+    
     for i, video in enumerate(videos, 1):
         try:
-            logger.info(f"Processing video {i}/{len(videos)}: {video['url']}")
+            video_id = video['video_id']
+            video_url = video['url']
+            
+            # Skip if video was already processed
+            if video_exists(video_id, db):
+                logger.info(f"Skipping video {video_id} - already processed")
+                continue
+                
+            logger.info(f"Processing video {i}/{len(videos)}: {video_url}")
             logger.info(f"Views: {video.get('views', 'N/A')}")
-            process_video(video['url'])
+            
+            try:
+                # Process the video
+                process_video(video_url)
+                
+                # Check if restaurants were found (video exists in the Video table)
+                has_restaurants = db.execute(
+                    select(Video).where(Video.video_id == video_id)
+                ).first() is not None
+                
+                # Mark video as processed
+                mark_video_as_processed(video_id, video_url, has_restaurants, db)
+                
+            except Exception as e:
+                # If processing fails, still mark it as processed but with no restaurants
+                logger.error(f"Failed to process video {video_url}: {str(e)}")
+                mark_video_as_processed(video_id, video_url, False, db)
+                continue
+                
             # Add longer sleep between videos to avoid rate limiting
             time.sleep(5)
+            
         except Exception as e:
-            logger.error(f"Failed to process video {video['url']}: {str(e)}", exc_info=True)
+            logger.error(f"Error processing video entry: {str(e)}")
             continue
+    
+    db.close()
 
 if __name__ == "__main__":
     total_processed = 0

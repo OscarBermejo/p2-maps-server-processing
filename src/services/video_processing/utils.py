@@ -94,6 +94,8 @@ def query_chatgpt(description: str, text: str, transcription: str) -> str:
         Example format:
         Maseria Moroseta, Ostuni, Boutique Hotel
         Grotta Palazzese, Polignano, Restaurant
+
+        Notes: The city name must be in english.
     """
 
     # Initialize OpenAI client with API key

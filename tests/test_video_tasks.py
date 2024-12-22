@@ -4,6 +4,7 @@ from pathlib import Path
 import logging
 import asyncio
 import concurrent.futures
+import time
 
 # Add the parent directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -29,6 +30,7 @@ console_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 
 async def process_video(url: str):
+    start_time = time.time()
     try:
         # 1. Download video and get metadata
         logger.info("Starting video download...")
@@ -110,6 +112,11 @@ async def process_video(url: str):
         if os.path.exists(audio_file):
             os.remove(audio_file)
             logger.info(f"Removed audio file: {audio_file}")
+
+        # Calculate and log total execution time
+        end_time = time.time()
+        execution_time = end_time - start_time
+        logger.info(f"Total execution time: {execution_time:.2f} seconds")
 
     except Exception as e:
         logger.error(f"Major error in process_video: {str(e)}", exc_info=True)
