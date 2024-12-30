@@ -1,0 +1,974 @@
+[
+  {
+    "name": "Imprevisto",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/imprevisto",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Bailèn 104",
+    "telephone": "+34 931 45 11 52",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "MAE Barcelona",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/mae-barcelona",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Sant Elíes 22",
+    "telephone": "+34 645 73 62 83",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Prodigi",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/prodigi",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Girona 145",
+    "telephone": "+34 936 79 15 92",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Capet",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/capet",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Cometa 5",
+    "telephone": "+34 937 20 44 21",
+    "cuisine": "Seasonal Cuisine"
+  },
+  {
+    "name": "Dos Cuiners",
+    "url": "https://guide.michelin.com/ie/en/catalunya/mataro/restaurant/dos-cuiners",
+    "city": "Mataro",
+    "stars": 0,
+    "location": "Muralla de Sant Llorenç 18",
+    "telephone": "+34 930 02 90 93",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Estimar",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/estimar",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Sant Antoni dels Sombrerers 3",
+    "telephone": "+34 932 68 91 97",
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Suto",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/suto",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Violant de Hungría Reina de Aragón 134",
+    "telephone": "+34 610 90 86 51",
+    "cuisine": "Japanese"
+  },
+  {
+    "name": "Fishølogy",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/fishology",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Diputació 73",
+    "telephone": "+34 936 33 98 58",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Can Ferrán",
+    "url": "https://guide.michelin.com/ie/en/catalunya/sant-quirze-del-valles/restaurant/can-ferran",
+    "city": "Sant quirze del valles",
+    "stars": 0,
+    "location": "Carretera de Rubí C 1413a",
+    "telephone": "+34 936 99 17 63",
+    "cuisine": "Catalan"
+  },
+  {
+    "name": "Ca l'Esteve",
+    "url": "https://guide.michelin.com/ie/en/catalunya/castellbisbal/restaurant/ca-l-esteve",
+    "city": "Castellbisbal",
+    "stars": 0,
+    "location": "Carretera Martorell-Terrassa C 243c",
+    "telephone": "+34 937 75 56 90",
+    "cuisine": "Catalan"
+  },
+  {
+    "name": "Virens",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/virens",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Gran Via de Les Corts Catalanes 619",
+    "telephone": "+34 930 18 74 51",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Ultramarinos Marín",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/ultramarinos-marin",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Balmes 187",
+    "telephone": "+34 932 17 65 52",
+    "cuisine": "Farm to table"
+  },
+  {
+    "name": "Olivos",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/olivos",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Galileu 159",
+    "telephone": "+34 722 59 36 86",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Jiribilla",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/jiribilla",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Comte Borrell, 85",
+    "telephone": "+34 938 56 31 80",
+    "cuisine": "Mexican"
+  },
+  {
+    "name": "Pur",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/pur",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Passatge de la Concepció 11",
+    "telephone": "+34 931 70 17 70",
+    "cuisine": "Farm to table"
+  },
+  {
+    "name": "Alapar",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/alapar",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Carrer de Lleida 5",
+    "telephone": "+34 938 87 20 96",
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Sant Miquel",
+    "url": "https://guide.michelin.com/ie/en/catalunya/vallromanes/restaurant/sant-miquel",
+    "city": "Vallromanes",
+    "stars": 0,
+    "location": "Plaza de l'Església 12",
+    "telephone": "+34 935 72 90 29",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "Berbena",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/berbena",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Minerva 6",
+    "telephone": "+34 691 95 77 97",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Besta",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/besta",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Aribau 106",
+    "telephone": "+34 930 19 82 94",
+    "cuisine": "Farm to table"
+  },
+  {
+    "name": "Uma",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/uma",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Mallorca 275",
+    "telephone": "+34 656 99 09 30",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Al Marge",
+    "url": "https://guide.michelin.com/ie/en/catalunya/badalona/restaurant/al-marge",
+    "city": "Badalona",
+    "stars": 0,
+    "location": "Lleó 79",
+    "telephone": "+34 938 24 71 90",
+    "cuisine": "Farm to table"
+  },
+  {
+    "name": "Mint",
+    "url": "https://guide.michelin.com/ie/en/catalunya/granollers/restaurant/mint",
+    "city": "Granollers",
+    "stars": 0,
+    "location": "Sant Josep 10",
+    "telephone": "+34 936 25 41 98",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "COME by Paco Méndez",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/come-by-paco-mendez",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Avenida del Mistral 54",
+    "telephone": "+34 938 27 59 77",
+    "cuisine": "Mexican"
+  },
+  {
+    "name": "Sensato",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/sensato",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Septimania 36",
+    "telephone": "+34 654 53 18 65",
+    "cuisine": "Japanese"
+  },
+  {
+    "name": "DIREKTE Boqueria",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/direkte-boqueria",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Les Cabres 13",
+    "telephone": "+34 931 14 69 39",
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Amar Barcelona",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/amar-barcelona",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Gran Via de les Corts Catalanes 668",
+    "telephone": "+34 931 03 99 88",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Cinc Sentits",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/cinc-sentits",
+    "city": "Barcelona",
+    "stars": 2,
+    "location": "Entença 60",
+    "telephone": "+34 933 23 94 90",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Koy Shunka",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/koy-shunka",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "De Copons 7",
+    "telephone": "+34 934 12 79 39",
+    "cuisine": "Japanese"
+  },
+  {
+    "name": "Suculent",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/suculent",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Rambla del Raval 45",
+    "telephone": "+34 934 43 65 79",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Oria",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/oria",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Passeig de Gràcia 75",
+    "telephone": "+34 935 48 20 33",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Windsor",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/windsor",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Còrsega 286",
+    "telephone": "+34 932 37 75 88",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Enigma",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/enigma",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Sepúlveda 38",
+    "telephone": "+34 616 69 63 22",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Hofmann",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/hofmann",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "La Granada del Penedès 14-16",
+    "telephone": "+34 932 18 71 65",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Tunateca Balfegó",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/tunateca-balfego",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Avenida Diagonal 439",
+    "telephone": "+34 937 97 64 60",
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "La Taverna del Clínic",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/la-taverna-del-clinic",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Rosselló 155",
+    "telephone": "+34 934 10 42 21",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "Vivanda",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/vivanda",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Major de Sarrià 134",
+    "telephone": "+34 932 03 19 18",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "Nectari",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/nectari",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "València 28",
+    "telephone": "+34 932 26 87 18",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Nairod",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/nairod",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Aribau 141",
+    "telephone": "+34 938 08 92 60",
+    "cuisine": "Farm to table"
+  },
+  {
+    "name": "Vapor Gastronòmic",
+    "url": "https://guide.michelin.com/ie/en/catalunya/terrassa/restaurant/vapor-gastronomic",
+    "city": "Terrassa",
+    "stars": 0,
+    "location": "De la Palla 15",
+    "telephone": "+34 659 56 61 36",
+    "cuisine": "Regional Cuisine"
+  },
+  {
+    "name": "Avenir",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/avenir",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Carrer de l'Avenir 72",
+    "telephone": "+34 691 90 71 38",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Taberna Noroeste",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/taberna-noroeste",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Radas 67",
+    "telephone": "+34 931 15 09 11",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "La Tartarería",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/la-tartareria",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Muntaner 26",
+    "telephone": "+34 936 53 79 80",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Atempo",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/atempo-1196425",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Còrsega 200",
+    "telephone": "+34 937 34 19 19",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Gresca",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/gresca",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Provença 230",
+    "telephone": "+34 934 51 61 93",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Enoteca Paco Pérez",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/enoteca204150",
+    "city": "Barcelona",
+    "stars": 2,
+    "location": "Marina 19",
+    "telephone": "+34 934 83 81 08",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Petit Comitè",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/petit-comite",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Passatge de la Concepció 13",
+    "telephone": "+34 936 33 76 27",
+    "cuisine": "Regional Cuisine"
+  },
+  {
+    "name": "Solc",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/solc",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Paseo de Gràcia 68",
+    "telephone": "+34 934 96 77 07",
+    "cuisine": "Mediterranean Cuisine"
+  },
+  {
+    "name": "Ají",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/aji",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Marina 19",
+    "telephone": "+34 935 11 97 67",
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Tram-Tram",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/tram-tram",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Major de Sarrià 121",
+    "telephone": "+34 932 04 85 18",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Hisop",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/hisop",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Passatge de Marimon 9",
+    "telephone": "+34 932 41 32 33",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Dos Pebrots",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/dos-pebrots",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Doctor Dou 19",
+    "telephone": "+34 938 53 95 98",
+    "cuisine": "Mediterranean Cuisine"
+  },
+  {
+    "name": "La Bodeguilla",
+    "url": "https://guide.michelin.com/ie/en/catalunya/terrassa/restaurant/la-bodeguilla224889",
+    "city": "Terrassa",
+    "stars": 0,
+    "location": "Provenza 4",
+    "telephone": "+34 937 84 14 62",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "El Racó",
+    "url": "https://guide.michelin.com/ie/en/catalunya/sant-climent-de-llobregat/restaurant/el-raco",
+    "city": "Sant climent de llobregat",
+    "stars": 0,
+    "location": "Poca Farina 20",
+    "telephone": "+34 936 58 16 39",
+    "cuisine": "Catalan"
+  },
+  {
+    "name": "Via Veneto",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/via-veneto",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Ganduxer 10",
+    "telephone": "+34 932 00 72 44",
+    "cuisine": "Classic Cuisine"
+  },
+  {
+    "name": "Ten's",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/ten-s",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Avenida Marqués de l'Argentera 11",
+    "telephone": "+34 933 19 22 22",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Paco Meralgo",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/paco-meralgo",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Muntaner 171",
+    "telephone": "+34 934 30 90 27",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "Osmosis",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/osmosis",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Aribau 100",
+    "telephone": "+34 934 54 52 01",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Xavier Pellicer",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/xavier-pellicer",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Provença 310",
+    "telephone": "+34 935 25 90 02",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Follia",
+    "url": "https://guide.michelin.com/ie/en/catalunya/sant-joan-despi/restaurant/follia",
+    "city": "Sant joan despi",
+    "stars": 0,
+    "location": "Creu de Muntaner 17",
+    "telephone": "+34 934 77 10 50",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Aürt",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/aurt",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Paseo del Taulat 262-264",
+    "telephone": "+34 935 07 08 60",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Kintsugi",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/kintsugi",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Còrsega 289",
+    "telephone": "+34 937 37 90 80",
+    "cuisine": "Japanese Contemporary"
+  },
+  {
+    "name": "Compartir Barcelona",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/compartir-barcelona",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Valencia 225",
+    "telephone": "+34 936 24 78 86",
+    "cuisine": "Mediterranean Cuisine"
+  },
+  {
+    "name": "Aleia",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/aleia",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Paseo de Gràcia 132",
+    "telephone": "+34 935 02 00 41",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Quirat",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/quirat",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Avenida de Rius I Taulet 1",
+    "telephone": "+34 934 26 22 23",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Tast & Gust",
+    "url": "https://guide.michelin.com/ie/en/catalunya/cerdanyola-del-valles/restaurant/tast-y-gust",
+    "city": "Cerdanyola del valles",
+    "stars": 0,
+    "location": "Sant Martí 92",
+    "telephone": "+34 935 91 00 00",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "Batea",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/batea",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Gran Via de Les Corts Catalanes 605",
+    "telephone": "+34 934 06 87 92",
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Deliri",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/deliri",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Còrsega 242",
+    "telephone": "+34 936 11 39 27",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Slow & Low",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/slow-low",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Comte Borrell 119",
+    "telephone": "+34 936 25 45 12",
+    "cuisine": "World Cuisine"
+  },
+  {
+    "name": "Can Poal",
+    "url": "https://guide.michelin.com/ie/en/catalunya/vallromanes/restaurant/can-poal",
+    "city": "Vallromanes",
+    "stars": 0,
+    "location": "Avenida Vilassar de Dalt 1b",
+    "telephone": "+34 935 72 94 34",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "La Fonda Ristol",
+    "url": "https://guide.michelin.com/ie/en/catalunya/viladecavalls/restaurant/ristol-viladecavalls",
+    "city": "Viladecavalls",
+    "stars": 0,
+    "location": "Antoni Soler Hospital 1",
+    "telephone": "+34 937 88 29 98",
+    "cuisine": "Catalan"
+  },
+  {
+    "name": "Mirko Carturan Cuiner",
+    "url": "https://guide.michelin.com/ie/en/catalunya/caldes-de-montbui/restaurant/mirko-carturan-cuiner",
+    "city": "Caldes de montbui",
+    "stars": 0,
+    "location": "Avenida Pi i Margall 75",
+    "telephone": "+34 938 65 41 60",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Garbí",
+    "url": "https://guide.michelin.com/ie/en/catalunya/castellar-del-valles/restaurant/garbi",
+    "city": "Castellar del valles",
+    "stars": 0,
+    "location": "Barcelona 52",
+    "telephone": "+34 937 14 65 57",
+    "cuisine": "Catalan"
+  },
+  {
+    "name": "Moments",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/moments",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Passeig de Gràcia 38-40",
+    "telephone": "+34 931 51 87 81",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Ébano",
+    "url": "https://guide.michelin.com/ie/en/catalunya/bellaterra/restaurant/ebano",
+    "city": "Bellaterra",
+    "stars": 0,
+    "location": "Avenida Josep María Marcet i Coll 24",
+    "telephone": "+34 935 80 33 40",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Lasarte",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/lasarte",
+    "city": "Barcelona",
+    "stars": 3,
+    "location": "Mallorca 259",
+    "telephone": "+34 934 45 32 42",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "ABaC",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/abac",
+    "city": "Barcelona",
+    "stars": 3,
+    "location": "Avenida del Tibidabo 1",
+    "telephone": "+34 933 19 66 00",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "El Cel de les Oques",
+    "url": "https://guide.michelin.com/ie/en/catalunya/terrassa/restaurant/el-cel-de-les-oques",
+    "city": "Terrassa",
+    "stars": 0,
+    "location": "De la Palla 15",
+    "telephone": "+34 937 33 82 07",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Bardeni-Caldeni",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/bardeni-caldeni",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Valencia 454",
+    "telephone": "+34 932 32 58 11",
+    "cuisine": "Meats and Grills"
+  },
+  {
+    "name": "Alkimia",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/alkimia",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Ronda San Antoni 41 - Principal",
+    "telephone": "+34 932 07 61 15",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Xerta",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/xerta",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Còrsega 289",
+    "telephone": "+34 937 37 90 80",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Disfrutar",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/disfrutar",
+    "city": "Barcelona",
+    "stars": 3,
+    "location": "Villarroel 163",
+    "telephone": "+34 933 48 68 96",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Angle",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/angle",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Aragó 214",
+    "telephone": "+34 932 16 77 77",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "Ca L'Estrany",
+    "url": "https://guide.michelin.com/ie/en/catalunya/cabrils/restaurant/ca-l-estrany",
+    "city": "Cabrils",
+    "stars": 0,
+    "location": "Camí Coll de Port 19",
+    "telephone": "+34 937 50 70 66",
+    "cuisine": "Farm to table"
+  },
+  {
+    "name": "Barra Alta Barcelona",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/barra-alta",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Laforja 11",
+    "telephone": "+34 936 39 31 34",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "La Bonaigua",
+    "url": "https://guide.michelin.com/ie/en/catalunya/sant-just-desvern/restaurant/la-bonaigua",
+    "city": "Sant just desvern",
+    "stars": 0,
+    "location": "Carretera Reial 54",
+    "telephone": "+34 933 71 13 97",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "Dos Palillos",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/dos-palillos",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Elisabets 9",
+    "telephone": "+34 933 04 05 13",
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "RíasKru",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/riaskru",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Lleida 7",
+    "telephone": "+34 934 24 81 52",
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Cruix",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/cruix",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Entença 57",
+    "telephone": "+34 935 25 23 18",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "La Forquilla",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/la-forquilla",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Aragó 152",
+    "telephone": "+34 933 00 79 80",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Sangiovese",
+    "url": "https://guide.michelin.com/ie/en/catalunya/mataro/restaurant/sangiovese",
+    "city": "Mataro",
+    "stars": 0,
+    "location": "Muralla de Sant Llorenç 32",
+    "telephone": "+34 937 41 02 67",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Cocina Hermanos Torres",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/cocina-hermanos-torres",
+    "city": "Barcelona",
+    "stars": 3,
+    "location": "Taquígraf Serra 20",
+    "telephone": "+34 934 10 00 20",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Contraban",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/contraban",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Riudarenes 7",
+    "telephone": "",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Restaurante 1497",
+    "url": "https://guide.michelin.com/ie/en/catalunya/vallromanes/restaurant/restaurante-1497",
+    "city": "Vallromanes",
+    "stars": 0,
+    "location": "Riera de Vallromanes",
+    "telephone": "+34 936 06 80 33",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Bacaro",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/bacaro-1206273",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Jerusalem 6",
+    "telephone": "+34 931 15 66 79",
+    "cuisine": "Italian"
+  },
+  {
+    "name": "Teatro kitchen & bar",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/teatro-kitchen-bar",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Avenida del Paralelo 164",
+    "telephone": "+34 936 83 69 98",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Caelis",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/caelis",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Via Laietana 49",
+    "telephone": "+34 935 10 12 05",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Fonda España",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/fonda-espana",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Sant Pau 9",
+    "telephone": "+34 932 20 09 22",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "L'Àpat",
+    "url": "https://guide.michelin.com/ie/en/catalunya/molins-de-rei/restaurant/l-apat",
+    "city": "Molins de rei",
+    "stars": 0,
+    "location": "Del Carril 38",
+    "telephone": "+34 936 68 05 58",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "âme",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/ame",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Londres 91",
+    "telephone": "+34 607 15 58 04",
+    "cuisine": "French Contemporary"
+  },
+  {
+    "name": "Brabo",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/brabo",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Séneca 28",
+    "telephone": "+34 931 24 77 45",
+    "cuisine": "Grills"
+  },
+  {
+    "name": "Saó",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/sao",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Cesare Cantù 2",
+    "telephone": "+34 935 66 39 68",
+    "cuisine": "Traditional Cuisine"
+  },
+  {
+    "name": "Bar Verat",
+    "url": "https://guide.michelin.com/ie/en/catalunya/santa-coloma-de-gramenet/restaurant/verat",
+    "city": "Santa coloma de gramenet",
+    "stars": 0,
+    "location": "Avenida Pallaresa 104",
+    "telephone": "+34 936 81 40 80",
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Mont Bar",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/mont-bar",
+    "city": "Barcelona",
+    "stars": 1,
+    "location": "Diputació 220",
+    "telephone": "+34 933 23 95 90",
+    "cuisine": "Creative"
+  },
+  {
+    "name": "Lluerna",
+    "url": "https://guide.michelin.com/ie/en/catalunya/santa-coloma-de-gramenet/restaurant/lluerna",
+    "city": "Santa coloma de gramenet",
+    "stars": 1,
+    "location": "Avenida Pallaresa 104",
+    "telephone": "+34 933 91 08 20",
+    "cuisine": "Modern Cuisine"
+  },
+  {
+    "name": "al kostat",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/alkostat",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Ronda San Antoni 41 - 1º",
+    "telephone": "+34 932 07 61 15",
+    "cuisine": "Catalan"
+  },
+  {
+    "name": "Kamikaze",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/taberna-kamikaze",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Roselló 197",
+    "telephone": "+34 931 81 35 70",
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "BaLó",
+    "url": "https://guide.michelin.com/ie/en/catalunya/barcelona/restaurant/balo",
+    "city": "Barcelona",
+    "stars": 0,
+    "location": "Déu I Mata 141",
+    "telephone": "+34 930 37 86 01",
+    "cuisine": "Contemporary"
+  },
+  {
+    "name": "Tresmacarrons",
+    "url": "https://guide.michelin.com/ie/en/catalunya/el-masnou/restaurant/tresmacarrons",
+    "city": "El masnou",
+    "stars": 1,
+    "location": "Avenida del Maresme 21",
+    "telephone": "+34 935 40 92 66",
+    "cuisine": "Modern Cuisine"
+  }
+]
