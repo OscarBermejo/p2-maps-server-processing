@@ -23,7 +23,9 @@ def create_search_hashtags(restaurant_name, city):
     
     # Create hashtag combinations - only restaurant specific
     hashtags = [
+        f"#{restaurant_name}",
         f"#{restaurant_name}{city}",
+        f"#{city}",
         f"#{restaurant_name}restaurant"
     ]
     
@@ -34,6 +36,23 @@ def search_tiktok_videos(restaurant_name, city, max_videos=5):
     Search TikTok for videos about a specific restaurant using hashtags
     Returns list of videos sorted by views
     """
+    # Keywords that indicate the video is about a restaurant/food
+    restaurant_keywords = {
+        # Restaurant-related
+        'restaurant', 'restaurante', 'dining', 'dinner', 'lunch', 'brunch',
+        'michelin', 'chef', 'cuisine', 'eatery', 'bistro',
+        
+        # Food-related
+        'food', 'foodie', 'meal', 'dish', 'menu', 'plate', 'tasting',
+        'delicious', 'yummy', 'tasty', 'gastronomy', 'gastronomia',
+        
+        # Specific meal types
+        'appetizer', 'starter', 'main course', 'dessert', 'entrée',
+        
+        # Local variations (add based on your location)
+        'comida', 'restauracja', 'ristorante'  # Spanish, Polish, Italian
+    }
+
     try:
         hashtags = create_search_hashtags(restaurant_name, city)
         logger.info(f"Searching TikTok with hashtags: {', '.join(hashtags)}")
@@ -42,18 +61,29 @@ def search_tiktok_videos(restaurant_name, city, max_videos=5):
         with TikTokAPI() as api:
             for hashtag in hashtags:
                 try:
-                    # Remove the # symbol for the search
                     tag_name = hashtag.replace('#', '')
-                    
-                    # Use challenge_info and challenge_videos methods
                     challenge = api.challenge(tag_name)
                     if challenge:
                         for video in challenge.videos:
                             try:
-                                # Get author info safely
-                                author_username = getattr(video.author, 'unique_id', None) or getattr(video.author, 'username', 'unknown')
+                                # Get video description and hashtags
+                                description = getattr(video, 'desc', '').lower() or ''
+                                video_hashtags = getattr(video, 'hashtags', []) or []
+                                video_hashtag_names = {tag.name.lower() for tag in video_hashtags}
                                 
-                                # Get video stats safely
+                                # Verify that the searched hashtag is actually in the video
+                                searched_tag = hashtag.replace('#', '').lower()
+                                if searched_tag not in video_hashtag_names and hashtag not in description.lower():
+                                    logger.info(f"Skipping video - doesn't contain searched hashtag {hashtag}")
+                                    continue
+                                
+                                # Check if any of the keywords are in the description
+                                if not any(keyword in description.lower() for keyword in restaurant_keywords):
+                                    logger.info(f"Skipping video - no relevant keywords in description: {description[:100]}...")
+                                    continue
+                                
+                                # Get other video details
+                                author_username = getattr(video.author, 'unique_id', None) or getattr(video.author, 'username', 'unknown')
                                 stats = getattr(video, 'stats', None)
                                 play_count = getattr(stats, 'play_count', 0) if stats else 0
                                 digg_count = getattr(stats, 'digg_count', 0) if stats else 0
@@ -63,10 +93,13 @@ def search_tiktok_videos(restaurant_name, city, max_videos=5):
                                     'views': play_count,
                                     'likes': digg_count,
                                     'creator': author_username,
-                                    'hashtag': hashtag
+                                    'hashtag': hashtag,
+                                    'description': description,
+                                    'video_hashtags': list(video_hashtag_names),
+                                    'matched_keywords': [word for word in restaurant_keywords if word in description.lower()]
                                 }
                                 videos.append(video_info)
-                                logger.info(f"Successfully processed video: {video.id}")
+                                logger.info(f"Added video with hashtag {hashtag} and keywords: {video_info['matched_keywords']}")
                                 
                                 if len(videos) >= max_videos:
                                     break
@@ -78,7 +111,6 @@ def search_tiktok_videos(restaurant_name, city, max_videos=5):
                                 logger.error(f"Error processing video for hashtag {hashtag}: {e}")
                                 continue
                                 
-                    # Be nice to TikTok's servers
                     time.sleep(2)
                     
                 except Exception as e:
@@ -88,7 +120,12 @@ def search_tiktok_videos(restaurant_name, city, max_videos=5):
             # Sort videos by views
             videos.sort(key=lambda x: x['views'], reverse=True)
             
-            return videos[:max_videos]  # Return only max_videos number of videos
+            # Print which keywords matched for each video
+            for video in videos[:max_videos]:
+                logger.info(f"Selected video matched keywords: {video['matched_keywords']}")
+                logger.info(f"Video hashtags: {video['video_hashtags']}")
+            
+            return videos[:max_videos]
             
     except Exception as e:
         logger.error(f"Error searching TikTok for {restaurant_name}: {e}")
@@ -111,8 +148,11 @@ def process_michelin_file(file_path):
         print("\nMichelin Restaurants and TikTok Videos:")
         print("=====================================")
         
-        # Process each restaurant
+        # Process only "Imprevisto" restaurant
         for restaurant in restaurants:
+            if restaurant.get('name') != 'Imprevisto':
+                continue
+                
             name = restaurant.get('name', 'N/A')
             city = restaurant.get('city', 'N/A')
             
@@ -133,12 +173,16 @@ def process_michelin_file(file_path):
                     print(f"   Likes: {video['likes']:,}")
                     print(f"   Creator: {video['creator']}")
                     print(f"   Found via: {video['hashtag']}")
+                    print(f"   Description: {video['description']}")
+                    print(f"   Video hashtags: {', '.join(video['video_hashtags'])}")
+                    print(f"   Matched keywords: {', '.join(video['matched_keywords'])}")
             else:
                 print("No TikTok videos found")
                 
             print("\n--------------------------------")
+            break  # Exit after processing Imprevisto
 
-        print(f"\nTotal restaurants processed: {len(restaurants)}")
+        print(f"\nProcessing complete for Imprevisto restaurant")
 
     except json.JSONDecodeError as e:
         logger.error(f"Error decoding JSON file: {e}")

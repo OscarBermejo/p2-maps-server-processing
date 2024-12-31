@@ -36,6 +36,7 @@ TAG_CONSOLIDATION = {
     'ambiance': ['historic', 'historic building', 'historic site', 'rooftop', 'waterfront', 'art-themed', 'instagrammable'],
     'special_meal': ['breakfast', 'brunch', 'dessert', 'desserts', 'buffet'],
     'market_dining': ['market', 'market dining', 'indoor market'],
+    'curated': ['curated'],
 }
 
 def consolidate_tags():
