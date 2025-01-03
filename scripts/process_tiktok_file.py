@@ -11,6 +11,7 @@ import psutil
 import datetime
 # Add garbage collection after each video
 import gc
+import glob 
 
 # Add project root to path
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -188,6 +189,9 @@ def search_tiktok_videos(restaurant_name, city, max_videos=5):
     Search TikTok for videos about a specific restaurant using multiple hashtags
     Returns list of videos sorted by views
     """
+    global logger
+    print(f"Starting search for videos about {restaurant_name} in {city}")
+    # Keywords that indicate the video is about a restaurant
     restaurant_keywords = {
         'restaurant', 'food', 'dining', 'meal', 'michelin',
         'chef', 'cuisine', 'foodie', 'menu', 'eating',
@@ -200,17 +204,21 @@ def search_tiktok_videos(restaurant_name, city, max_videos=5):
         
         with TikTokAPI() as api:
             for hashtag in search_hashtags:
-                print(f"Searching TikTok with hashtag: {hashtag}")
+                logger.info(f"Searching TikTok with hashtag: {hashtag}")
+                video_count = 0  # Initialize video count for each hashtag
                 
                 try:
                     clean_tag = hashtag.replace('#', '')
-                    print(f"Fetching challenge for tag: {clean_tag}")
+                    logger.info(f"Fetching challenge for tag: {clean_tag}")
                     
                     challenge = api.challenge(clean_tag)
-                    print("Challenge fetched successfully")
+                    logger.info("Challenge fetched successfully")
                     
                     for video in challenge.videos:
                         try:
+                            # Increment video count
+                            video_count += 1
+                            
                             description = video.desc.lower()
                             video_hashtags = [tag.lower() for tag in video.hashtags] if hasattr(video, 'hashtags') else []
                             
@@ -242,17 +250,17 @@ def search_tiktok_videos(restaurant_name, city, max_videos=5):
                             print(f"Added video from hashtag {hashtag} with keywords: {matched_keywords}")
                             
                         except Exception as e:
-                            print(f"Error processing video: {str(e)}")
+                            logger.error(f"Error processing video: {str(e)}")
                             continue
                             
-                        if video_count >= 20:
-                            print(f"Reached maximum video count for hashtag {hashtag}")
+                        if video_count >= 20:  # Check if we've reached the limit
+                            logger.info(f"Reached maximum video count for hashtag {hashtag}")
                             break
                             
                     time.sleep(2)
                     
                 except Exception as e:
-                    print(f"Error processing hashtag {hashtag}: {str(e)}")
+                    logger.error(f"Error processing hashtag {hashtag}: {str(e)}")
                     continue
         
         # Remove duplicates based on URL
