@@ -177,7 +177,7 @@ def main():
         restaurants = (db.query(Restaurant)
                       .outerjoin(Restaurant.tags)
                       .group_by(Restaurant.id)
-                      .having(func.count(Tag.id) == 0)
+                      .having(func.count(Tag.id) <= 2)
                       .all())
         
         total = len(restaurants)

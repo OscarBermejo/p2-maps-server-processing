@@ -37,6 +37,7 @@ TAG_CONSOLIDATION = {
     'special_meal': ['breakfast', 'brunch', 'dessert', 'desserts', 'buffet'],
     'market_dining': ['market', 'market dining', 'indoor market'],
     'curated': ['curated'],
+    'michelin': ['michelin'],
 }
 
 def consolidate_tags():

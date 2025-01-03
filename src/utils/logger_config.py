@@ -25,10 +25,6 @@ def setup_cloudwatch_logging(app_name='maps-server'):
     # Set formatter to handle missing fields gracefully
     class SafeFormatter(logging.Formatter):
         def format(self, record):
-            if not hasattr(record, 'frontend_data'):
-                record.frontend_data = ''
-            if not hasattr(record, 'session_id'):
-                record.session_id = ''
             # Add log level color or prefix for better visibility
             if record.levelno == logging.ERROR:
                 record.levelname = f'⛔ {record.levelname}'
@@ -37,7 +33,7 @@ def setup_cloudwatch_logging(app_name='maps-server'):
             return super().format(record)
     
     formatter = SafeFormatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s - Frontend Data: %(frontend_data)s - Session: %(session_id)s'
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
     handler.setFormatter(formatter)
     
